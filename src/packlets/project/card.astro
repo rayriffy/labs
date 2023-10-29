@@ -12,7 +12,7 @@ const { title, description, url, image, date, anchorProps, ...rest } = Astro.pro
 ---
 
 <a
-  href="https://storage.rayriffy.com/files/labs/miraidayo.usdz#custom=http://192.168.2.15:5173/miraidayo/banner.html?1&customHeight=large&allowsContentScaling=0"
+  href={url}
   {...omit(rest, 'class')}
   {...omit(anchorProps, 'class')}
   class={clsx(
