@@ -1,0 +1,31 @@
+{
+  "name": "labs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --port 5173",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write \"**/*.{ts,tsx,md,astro}\""
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.2.1",
+    "@astrojs/tailwind": "^5.0.2",
+    "@fontsource-variable/manrope": "^5.0.17",
+    "@types/lodash": "^4.14.200",
+    "astro": "^3.4.0",
+    "astro-seo": "^0.8.0",
+    "clsx": "^2.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^5.2.2"
+  }
+}

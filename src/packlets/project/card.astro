@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+import { clsx } from 'clsx'
+import omit from 'lodash/omit'
+import dayjs from 'dayjs'
+
+import type { AnchorProps, Project } from '$project/types'
+
+type Props = AnchorProps & Project
+
+const { title, description, url, image, date, anchorProps, ...rest } = Astro.props
+---
+
+<a
+  href="https://storage.rayriffy.com/files/labs/miraidayo.usdz#custom=http://192.168.2.15:5173/miraidayo/banner.html?1&customHeight=large&allowsContentScaling=0"
+  {...omit(rest, 'class')}
+  {...omit(anchorProps, 'class')}
+  class={clsx(
+    'border px-6 py-4 rounded-xl space-y-4 sm:flex gap-4 items-center shadow',
+    rest.class,
+    anchorProps?.class
+  )}
+>
+  {
+    image && (
+      <Image src={image} alt={title} class="w-full h-auto sm:w-20 sm:h-20 rounded-xl" />
+    )
+  }
+  <div>
+    <h1 class="text-2xl font-bold">{title}</h1>
+    <p>
+      {description}
+    </p>
+    <p class="text-gray-600 text-sm">Published: {dayjs(date).format('DD MMM YYYY ')}</p>
+  </div>
+</a>

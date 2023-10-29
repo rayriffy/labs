@@ -1,0 +1,31 @@
+---
+import { clsx } from 'clsx'
+
+import Blank from '$layout/blank.astro'
+import { projects } from '$project'
+import ProjectCard from '$project/card.astro'
+---
+
+<Blank class="space-y-12">
+  <div class="pt-16 space-y-4">
+    <h1 class="text-8xl font-extrabold">Riffy Labs 🧪</h1>
+    <p class="text-gray-700 text-2xl">
+      <a href="https://rayriffy.com" class="text-blue-600">Riffy</a>'s playtest
+      area for showcasing many small experiments.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+    {
+      projects.map((project, i) => (
+        <ProjectCard
+          {...project}
+          class={clsx(
+            i % 2 === 0
+              ? 'sm:col-start-1 sm:col-end-3'
+              : 'sm:col-start-2 sm:col-end-4'
+          )}
+        />
+      ))
+    }
+  </div>
+</Blank>
