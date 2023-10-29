@@ -16,14 +16,14 @@ const { title, description, url, image, date, anchorProps, ...rest } = Astro.pro
   {...omit(rest, 'class')}
   {...omit(anchorProps, 'class')}
   class={clsx(
-    'border px-6 py-4 rounded-xl space-y-4 sm:flex gap-4 items-center shadow',
+    'border px-6 py-4 rounded-xl space-y-4 sm:flex gap-4 justify-center items-center shadow',
     rest.class,
     anchorProps?.class
   )}
 >
   {
     image && (
-      <Image src={image} alt={title} class="w-full h-auto sm:w-20 sm:h-20 rounded-xl" />
+      <Image src={image} alt={title} class="w-auto h-full max-h-[200px] sm:w-20 sm:h-20 rounded-xl mx-auto" />
     )
   }
   <div>
