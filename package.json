@@ -18,6 +18,7 @@
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource-variable/manrope": "^5.0.17",
     "@types/lodash": "^4.14.200",
+    "@types/twemoji": "^13.1.2",
     "astro": "^3.4.0",
     "astro-seo": "^0.8.0",
     "clsx": "^2.0.0",
@@ -26,6 +27,7 @@
     "prettier-plugin-tailwindcss": "^0.5.6",
     "sharp": "^0.32.6",
     "tailwindcss": "^3.0.24",
+    "twemoji": "^14.0.2",
     "typescript": "^5.2.2"
   }
 }

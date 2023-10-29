@@ -5,7 +5,7 @@ import type { Project } from '$project/types'
 
 export const projects: Project[] = [
   {
-    url: 'https://storage.rayriffy.com/files/labs/miraidayo.usdz#custom=https://labs.rayriffy.com/miraidayo/banner/index.html?1&customHeight=large&allowsContentScaling=0',
+    url: `https://storage.rayriffy.com/files/labs/miraidayo.usdz#custom=https://labs.rayriffy.com/miraidayo/banner?1&customHeight=small&allowsContentScaling=0`,
     title: 'Mirai dayo~',
     description:
       'With the power of Augmented Reality, everyone can be Mirai (未来 = future)!',

@@ -1,0 +1,18 @@
+---
+import twemoji from 'twemoji'
+
+interface Props {
+  emoji: string
+  class?: string
+}
+
+const { emoji, class: className } = Astro.props
+---
+
+<Fragment
+  set:html={twemoji.parse(emoji, {
+    folder: 'svg',
+    ext: '.svg',
+    className: className,
+  })}
+/>
